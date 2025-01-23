@@ -1,0 +1,9 @@
+// Remove unused import
+// import { CreateProductModel } from './components/CreateProductModel'
+
+// Either use these variables or remove them
+// const isModalOpen = ...
+// const productName = ...
+// const handleProductCreate = ...
+
+// If you need these for future use, you can comment them out instead of removing 
