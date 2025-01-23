@@ -101,7 +101,6 @@ export const accountingController = {
         data: {
           driverId: deliveryData.driverId,
           clientId: deliveryData.clientId,
-          amount: deliveryData.amount,
           cashAmount: deliveryData.cashAmount,
           cardAmount: deliveryData.cardAmount,
           transfer: deliveryData.transfer,
@@ -349,7 +348,6 @@ export const accountingController = {
         data: {
           driverId: deliveryData.driverId,
           clientId: deliveryData.clientId,
-          amount: deliveryData.amount,
           cashAmount: deliveryData.cashAmount,
           cardAmount: deliveryData.cardAmount,
           transfer: deliveryData.transfer,
