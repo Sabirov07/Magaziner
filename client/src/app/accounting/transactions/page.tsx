@@ -20,7 +20,6 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import TransactionFormModal from "./TransactionFormModal";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 interface Transaction {
   id: string;
@@ -38,12 +37,6 @@ const formatDate = (dateString: string, formatStr: string) => {
     console.error('Error formatting date:', error);
     return dateString;
   }
-};
-
-// Add this CSS to your component or in your global CSS file
-const datePickerStyles = {
-  input: "px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
-  container: "relative"
 };
 
 export default function DailyAccountingPage() {
@@ -213,11 +206,11 @@ export default function DailyAccountingPage() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600">Boshlanish:</span>
-              <div className={datePickerStyles.container}>
+              <div className="p-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
                 <DatePicker
                   selected={startDate}
                   onChange={(date: Date | null) => setStartDate(date)}
-                  className={datePickerStyles.input}
+                  className="p-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                   placeholderText="Boshlanish sanasini tanlang"
                   isClearable
                   dateFormat="dd/MM/yyyy"
@@ -229,11 +222,11 @@ export default function DailyAccountingPage() {
             </div>
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600">Tugash:</span>
-              <div className={datePickerStyles.container}>
+              <div className="p-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
                 <DatePicker
                   selected={endDate}
                   onChange={(date: Date | null) => setEndDate(date)}
-                  className={datePickerStyles.input}
+                  className="p-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                   placeholderText="Tugash sanasini tanlang"
                   isClearable
                   dateFormat="dd/MM/yyyy"

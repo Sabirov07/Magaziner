@@ -29,3 +29,31 @@ body,
     grid-template-rows: repeat(8, 7.5vh);
   }
 }
+
+/* Add these styles at the end of your globals.css */
+.react-datepicker-wrapper {
+  width: auto;
+}
+
+.react-datepicker {
+  font-family: inherit;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.react-datepicker__header {
+  background-color: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.react-datepicker__day--selected {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #bfdbfe !important;
+}
