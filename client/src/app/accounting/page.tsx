@@ -11,7 +11,6 @@ import {
   useGetDriverDayTotalCashQuery,
 } from "@/state/api";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { Driver, Delivery, DriverExpense } from "@/state/api";
 import AddDeliveryModal from "../(componenets)/AddDeliveryModal";
 import { useRouter } from "next/navigation";
