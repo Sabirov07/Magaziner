@@ -1,0 +1,196 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  userId String @id
+  name   String
+  email  String
+}
+
+model Products {
+  productId     String      @id
+  name          String
+  price         Float
+  rating        Float?
+  stockQuantity Int
+  Sales         Sales[]
+  Purchases     Purchases[]
+  logs ProductLog[]
+}
+
+model Sales {
+  saleId      String   @id
+  productId   String
+  timestamp   DateTime
+  quantity    Int
+  unitPrice   Float
+  totalAmount Float
+  product     Products @relation(fields: [productId], references: [productId])
+}
+
+model Purchases {
+  purchaseId String   @id
+  productId  String
+  timestamp  DateTime
+  quantity   Int
+  unitCost   Float
+  totalCost  Float
+  product    Products @relation(fields: [productId], references: [productId])
+}
+
+model Expenses {
+  expenseId String   @id
+  category  String
+  amount    Float
+  timestamp DateTime
+}
+
+model SalesSummary {
+  salesSummaryId   String   @id
+  totalValue       Float
+  changePercentage Float?
+  date             DateTime
+}
+
+model PurchaseSummary {
+  purchaseSummaryId String   @id
+  totalPurchased    Float
+  changePercentage  Float?
+  date              DateTime
+}
+
+model ExpenseSummary {
+  expenseSummaryId  String              @id
+  totalExpenses     Float
+  date              DateTime
+  ExpenseByCategory ExpenseByCategory[]
+}
+
+model ExpenseByCategory {
+  expenseByCategoryId String         @id
+  expenseSummaryId    String
+  category            String
+  amount              BigInt
+  date                DateTime
+  expenseSummary      ExpenseSummary @relation(fields: [expenseSummaryId], references: [expenseSummaryId])
+}
+
+model ProductLog {
+  id        String   @id @default(uuid())
+  productId String
+  type      String   // 'income' or 'outcome'
+  value     Int
+  user      String   // For now, this will be static 'Vohidjon'
+  createdAt DateTime @default(now())
+  product   Products @relation(fields: [productId], references: [productId])
+}
+
+model Client {
+  id          String        @id @default(uuid())
+  name        String        @unique
+  address     String?
+  phone       String?
+  deliveries  Delivery[]
+  debts       ClientDebt[]
+  createdAt   DateTime      @default(now())
+}
+
+model ClientDebt {
+  id          String    @id @default(uuid())
+  clientId    String
+  client      Client    @relation(fields: [clientId], references: [id])
+  amount      Float     
+  description String?
+  debtDate    DateTime  @default(now())
+  type        String    @default("DEBT")
+  createdAt   DateTime  @default(now())
+  payments    DebtPayment[]
+}
+
+model DebtPayment {
+  id          String     @id @default(uuid())
+  clientDebtId String
+  clientDebt   ClientDebt @relation(fields: [clientDebtId], references: [id])
+  amount      Float
+  paymentDate DateTime   @default(now())
+  createdAt   DateTime   @default(now())
+}
+
+model Delivery {
+  id            String   @id @default(uuid())
+  clientId      String
+  driverId      String
+  deliveryDate  DateTime
+  goodsAmount   Float    @default(0)
+  cashAmount    Float    @default(0)
+  cardAmount    Float    @default(0)
+  transfer      Float    @default(0)
+  debt          Float    @default(0)
+  extraPayment  Float    @default(0)
+  client        Client   @relation(fields: [clientId], references: [id])
+  driver        Driver   @relation(fields: [driverId], references: [id])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Driver {
+  id            String           @id @default(uuid())
+  name          String
+  deliveries    Delivery[]
+  expenses      DriverExpense[]
+  dayStatuses   DriverDayStatus[]
+  createdAt     DateTime         @default(now())
+}
+
+model DriverExpense {
+  id          String   @id @default(uuid())
+  driverId    String
+  driver      Driver   @relation(fields: [driverId], references: [id])
+  type        String   // 'FUEL', 'MAINTENANCE', 'REPAIR', 'OTHER'
+  name        String?  // Add this field
+  amount      Float
+  expenseDate DateTime @default(now())
+  createdAt   DateTime @default(now())
+}
+
+model DriverDayStatus {
+  id          String   @id @default(uuid())
+  driverId    String
+  driver      Driver   @relation(fields: [driverId], references: [id])
+  date        DateTime
+  status      String   // 'PENDING', 'PAID_OFF', 'PARTIALLY_PAID', 'DISPUTED'
+  totalCash   Float
+  cashPaid    Float
+  notes       String?
+  banknotes   Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([driverId, date])
+}
+
+model DailyIncome {
+  id          String   @id @default(uuid())
+  amount      Float
+  description String
+  date        DateTime @default(now())
+}
+
+model DailyExpense {
+  id          String   @id @default(uuid())
+  amount      Float
+  description String
+  date        DateTime @default(now())
+}

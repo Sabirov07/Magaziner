@@ -1,0 +1,16 @@
+[
+  {
+    "id": "5f9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "driverId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "type": "fuel",
+    "amount": 150.75,
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "6g9e7bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "driverId": "e390f1ee-6c54-4b01-90e6-d701748f0852",
+    "type": "hotel",
+    "amount": 200.00,
+    "createdAt": "2024-03-15T00:00:00Z"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "name": "Ilhom",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "e390f1ee-6c54-4b01-90e6-d701748f0852",
+    "name": "Feruz",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "f490f1ee-6c54-4b01-90e6-d701748f0853",
+    "name": "Habibullo",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "g590f1ee-6c54-4b01-90e6-d701748f0854",
+    "name": "Sanjar",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "h690f1ee-6c54-4b01-90e6-d701748f0855",
+    "name": "Qara",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "i790f1ee-6c54-4b01-90e6-d701748f0856",
+    "name": "Iqbol",
+    "createdAt": "2024-03-15T00:00:00Z"
+  }
+]

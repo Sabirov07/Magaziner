@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
+    "date": "2024-03-15T00:00:00Z",
+    "driverId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "totalAmount": 15000.75,
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "2c9e7bcd-bbfd-4b2d-9b5d-ab8dfbbd4bee",
+    "date": "2024-03-15T00:00:00Z",
+    "driverId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "totalAmount": 25000.50,
+    "createdAt": "2024-03-15T00:00:00Z"
+  }
+]

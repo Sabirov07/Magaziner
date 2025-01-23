@@ -1,0 +1,512 @@
+[
+  {
+    "id": "c1d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Augustow",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c2d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "BD Szczytno",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcd2-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Barcin Comilla",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcd3-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Barlinek Chilli",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcd4-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Barlinek Sulton",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcd5-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Bieżuń",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcd6-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Braniewo",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcd7-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Brodnica Mieszka",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcd8-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Brodnica Rynek",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcd9-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Carnkow",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcda-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Chełmno",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcdb-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Chełmza",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcdc-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Chełmża",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcdd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Chilli Morąg",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcde-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Chilli Pionki",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcdf-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Chociwel",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce0-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Chojna",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce1-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Chorzele zam",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce2-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Choszcno",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce3-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Czarnkow",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce4-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Debno",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce5-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Dobra",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce6-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Dobre Miasto",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce7-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Dobrzany",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce8-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Doner Kozienica",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bce9-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Działdowo",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcea-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Elblag Express",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bceb-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Gizycko",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcec-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Golczewo",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bced-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Goleniow",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcee-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Gryfino",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcef-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Ilawa",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf0-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Kamien Huzaifa",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf1-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Kamien Pomorski chilli",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf2-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Kaufland",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf3-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Kluczbork",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf4-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Kolo",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf5-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Kostrzyn",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf6-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Kozle",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf7-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Kozuchow",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf8-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Krasinskiego",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcf9-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Lebork",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcfa-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Leczyca",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcfb-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Lidzbark",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcfc-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Lidzbark Warminski",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcfd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Lipiany",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcfe-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Lipno",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bcff-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Lipowa",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd00-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Lubawa",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd01-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Lubliniec",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd03-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Miastko",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd04-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Miedzychod",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd05-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Miedzyrzecz",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd06-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Mir Branewo",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd07-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Mir Morąg",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd08-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Moków Maz",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd09-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Mysliborz Chilli",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd0a-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Mysliborz Comilla",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd0b-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Mława",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd0c-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Naklo",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd0d-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Nidzica",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd0e-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Nowe Miasto",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd0f-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Nowogard",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd10-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Okonek",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd11-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Ostroda",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd12-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Ostróda",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd13-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Ploty",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd14-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Police Wroblewskiego",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd15-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Police grzybowa",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd16-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Police wroblewskiego",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd17-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Police wyszynskiego",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd18-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Polszyn zdroj",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd19-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Powstancow",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd1a-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Prudnik",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd1b-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Przasnysz",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd1c-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Radom",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd1d-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Rawa Mazowiecka",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd1e-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Resko",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd1f-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Rypin",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd20-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Shorma Pionki",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd21-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Sierpc",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd22-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Slubice",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd24-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Stargard",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd25-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Stepnica huzaifa",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd26-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Strzelce",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd27-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Sulecin",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd29-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Swiebodzin",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd2a-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Swiecie BD Jana Pawla",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd2b-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Swiecie Klasztorna",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd2c-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Swiecie Kofland",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd2d-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Szczecin jasna",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd2e-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Szczecin plac",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd2f-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Szczecin unii",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd30-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Szczecin weilki",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd31-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Szczencinek",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd32-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Szubin",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd33-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Tuchola",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd34-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Wielen",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd35-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Witnica",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd36-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Wolin",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd37-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Wolin Sienkiewicza",
+    "createdAt": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "c1d6bd38-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "name": "Wolin katedralna",
+    "createdAt": "2024-03-15T00:00:00Z"
+  }
+]

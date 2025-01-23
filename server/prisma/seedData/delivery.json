@@ -1,0 +1,26 @@
+[
+  {
+    "id": "3d9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "clientId": "c1d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "clientName": "Augustow",
+    "amount": 5000,
+    "cashAmount": 3000,
+    "cardAmount": 2000,
+    "transfer": 0,
+    "debt": 0,
+    "driverId": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "deliveryDate": "2024-03-15T00:00:00Z"
+  },
+  {
+    "id": "4e9e7bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "clientName": "BD Szczytno",
+    "clientId": "c2d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
+    "amount": 10000.75,
+    "cashAmount": 5000.75,
+    "cardAmount": 3000.00,
+    "transfer": 2000.00,
+    "debt": 0.00,
+    "driverId": "e390f1ee-6c54-4b01-90e6-d701748f0852",
+    "deliveryDate": "2024-03-15T00:00:00Z"
+  }
+]
