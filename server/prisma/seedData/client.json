@@ -2,11 +2,15 @@
   {
     "id": "c1d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
     "name": "Augustow",
+    "address": null,
+    "phone": null,
     "createdAt": "2024-03-15T00:00:00Z"
   },
   {
     "id": "c2d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef",
     "name": "BD Szczytno",
+    "address": null,
+    "phone": null,
     "createdAt": "2024-03-15T00:00:00Z"
   },
   {

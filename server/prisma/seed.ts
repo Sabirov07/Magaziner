@@ -33,7 +33,7 @@ async function main() {
   const dataDirectory = path.join(__dirname, "seedData");
 
   const orderedFileNames = [
-    // "products.json",
+    "products.json",
     // "expenseSummary.json",
     // "sales.json",
     // "salesSummary.json",
@@ -44,11 +44,11 @@ async function main() {
     // "expenseByCategory.json",
     // "client.json",
     // "driver.json",
-    "delivery.json",
-    "driverExpense.json",
-    "debtPayment.json",
-    "clientDebt.json",
-    "clientDebtPayment.json"
+    // "delivery.json",
+    // "driverExpense.json",
+    // "debtPayment.json",
+    // "clientDebt.json",
+    // "clientDebtPayment.json"
 
   ];
 
