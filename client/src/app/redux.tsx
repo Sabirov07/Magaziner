@@ -24,15 +24,21 @@ import { PersistGate } from "redux-persist/integration/react";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 
 /* REDUX PERSISTENCE */
-const createNoopStorage = () => {
+interface Storage {
+  getItem(key: string): Promise<string | null>;
+  setItem(key: string, value: string): Promise<string>;
+  removeItem(key: string): Promise<void>;
+}
+
+const createNoopStorage = (): Storage => {
   return {
-    getItem(_key: any) {
+    getItem(key: string) {
       return Promise.resolve(null);
     },
-    setItem(_key: any, value: any) {
+    setItem(key: string, value: string) {
       return Promise.resolve(value);
     },
-    removeItem(_key: any) {
+    removeItem(key: string) {
       return Promise.resolve();
     },
   };

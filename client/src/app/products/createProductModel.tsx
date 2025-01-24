@@ -14,7 +14,7 @@ type CreateProductModelProps = {
   onCreate: (formData: ProductFormData) => void;
 };
 
-function createProductModel({
+export function CreateProductModel({
   isOpen,
   onClose,
   onCreate,
@@ -111,4 +111,4 @@ function createProductModel({
   );
 }
 
-export default createProductModel;
+export default CreateProductModel;

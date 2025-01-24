@@ -1,23 +1,23 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import Header from "../(componenets)/Header";
 
-type logData = {
+type LogData = {
   productId: string;
   type: string;
   value: number;
 };
 
-type logProductModelProps = {
+type LogProductModelProps = {
   productName: string;
   productId: string;
   lable: string;
   type: string;
   isOpen: boolean;
   onClose: () => void;
-  onLog: (formData: logData) => void;
+  onLog: (formData: LogData) => void;
 };
 
-function logProductModel({
+export function LogProductModel({
   productName,
   productId,
   lable,
@@ -25,8 +25,8 @@ function logProductModel({
   isOpen,
   onClose,
   onLog,
-}: logProductModelProps) {
-  const [formData, setFromData] = useState<logData>({
+}: LogProductModelProps) {
+  const [formData, setFromData] = useState<LogData>({
     productId,
     type,
     value: 0,
@@ -58,8 +58,12 @@ function logProductModel({
         value: 0,
       });
       onClose();
-    } catch (error: any) {
-      setError(error.message || 'Xatolik!');
+    } catch (error) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError('Xatolik!');
+      }
     }
   };
 
@@ -137,4 +141,4 @@ function logProductModel({
   );
 }
 
-export default logProductModel;
+export default LogProductModel;
