@@ -10,7 +10,6 @@ router.get('/drivers/:driverId/expenses', accountingController.getDriverExpenses
 // Delivery routes
 router.post('/deliveries', accountingController.createDelivery);
 router.get('/deliveries', accountingController.getDeliveries);
-router.get('/drivers/:driverId/cash-total', accountingController.getDriverCashTotal);
 router.get('/deliveries/:id', accountingController.getDeliveryById);
 router.put('/deliveries/:id', accountingController.updateDelivery);
 router.delete('/deliveries/:id', accountingController.deleteDelivery);

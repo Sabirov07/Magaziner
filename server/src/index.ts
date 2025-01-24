@@ -14,16 +14,28 @@ import driverRoutes from './routes/driverRoutes';
 import { getProducts } from './controllers/productController';
 
 
+// Update CORS configuration
+const corsOptions = {
+  origin: [
+    'https://master.d2ku7rh3vs4gc2.amplifyapp.com', // Your Amplify frontend URL
+    'http://localhost:3000' // Local development URL
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
+
 // CONFIGURATIONS
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(helmet());
-app.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"}));
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: "cross-origin" }
+}));
 app.use(morgan("common"));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(cors());
+app.use(cors(corsOptions)); // Use the configured CORS options
 
 
 // ROUTES
