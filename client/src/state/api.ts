@@ -223,15 +223,7 @@ export interface DailyExpense {
 }
 
 export const api = createApi({
-  baseQuery: fetchBaseQuery({ 
-    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL,
-    credentials: 'include',
-    prepareHeaders: (headers) => {
-      headers.set('Content-Type', 'application/json');
-      // Add any other required headers
-      return headers;
-    }
-  }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
   reducerPath: 'api',
   tagTypes: [
     'DashboardMetrics', 
