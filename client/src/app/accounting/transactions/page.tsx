@@ -18,6 +18,7 @@ import { format } from "date-fns";
 import TransactionFormModal from "./TransactionFormModal";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { SearchX } from "lucide-react";
 
 interface Transaction {
   id: string;
@@ -203,8 +204,8 @@ export default function DailyAccountingPage() {
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-2xl font-bold">
             Kunlik Hisob
-            {startDate && ` - ${formatDate(startDate.toISOString(), "dd MMMM yyyy")}`}
-            {endDate && ` dan ${formatDate(endDate.toISOString(), "dd MMMM yyyy")} gacha`}
+            {startDate && ` - ${formatDate(startDate.toISOString(), "dd.MM.yyyy")} dan`}
+            {endDate && ` ${formatDate(endDate.toISOString(), "dd.MM.yyyy")} gacha`}
           </h1>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
@@ -239,15 +240,15 @@ export default function DailyAccountingPage() {
                 />
               </div>
             </div>
-            <button
+            { (startDate || endDate) && <button
               onClick={() => {
                 setStartDate(null);
                 setEndDate(null);
               }}
               className="text-sm text-blue-500 hover:text-blue-700 font-medium"
             >
-              Sanani tiklash
-            </button>
+              <>{<SearchX className="h-5 w-5 mr-2" />}</>
+            </button>}
           </div>
         </div>
 
