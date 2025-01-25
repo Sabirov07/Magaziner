@@ -5,8 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useGetClientsQuery, useUpdateClientMutation } from '@/state/api';
 import AddClientModal from './AddClientModal';
 import Header from '../(componenets)/Header';
-import { UserRoundPlus, Edit2 } from 'lucide-react';
-import EditClientModal from './EditClientModal';
+import { UserRoundPlus } from 'lucide-react';
 
 export default function ClientsPage() {
   const router = useRouter();
@@ -22,28 +21,12 @@ export default function ClientsPage() {
     client.phone?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const handleEditClick = (e: React.MouseEvent, client: any) => {
-    e.stopPropagation(); // Prevent navigation when clicking edit
-    setSelectedClient(client);
-    setIsModalOpen(true);
-  };
-
   const handleClientClick = (clientId: string) => {
     router.push(`/clients/${clientId}`);
   };
 
-  const handleUpdateClient = async (id: string, data: { name: string; address?: string; phone?: string }) => {
-    try {
-      await updateClient({ id, data }).unwrap();
-      setIsModalOpen(false);
-      setSelectedClient(null);
-    } catch (error) {
-      console.error('Failed to update client:', error);
-    }
-  };
-
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>Yuklanmoqda...</div>;
   }
 
   return (
@@ -77,12 +60,6 @@ export default function ClientsPage() {
             onClick={() => handleClientClick(client.id)}
             className="border rounded-lg p-4 bg-white shadow hover:shadow-md transition-shadow cursor-pointer relative"
           >
-            <button
-              onClick={(e) => handleEditClick(e, client)}
-              className="absolute top-2 right-2 p-2 hover:bg-gray-100 rounded-full"
-            >
-              <Edit2 className="h-4 w-4 text-gray-500" />
-            </button>
             <div className="flex items-center space-x-4">
               <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
                 <span className="text-xl font-bold text-blue-500">
@@ -108,15 +85,9 @@ export default function ClientsPage() {
           </div>
         )}
       </div>
-
-      <EditClientModal
-        isOpen={isModalOpen}
-        onClose={() => {
-          setIsModalOpen(false);
-          setSelectedClient(null);
-        }}
-        client={selectedClient}
-        onUpdate={handleUpdateClient}
+      <AddClientModal 
+        isOpen={isModalOpen && !selectedClient}
+        onClose={() => setIsModalOpen(false)}
       />
     </div>
   );
