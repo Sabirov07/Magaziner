@@ -3,20 +3,18 @@
 import { useState, useMemo } from "react";
 import {
   useGetDeliveriesQuery,
-  useGetDriverExpensesQuery,
   useGetDriversQuery,
   useGetDriverDayStatusQuery,
   useGetAllDriverExpensesQuery,
-  useGetDriverDayStatusesQuery,
   useGetDriverDayTotalCashQuery,
 } from "@/state/api";
 import DatePicker from "react-datepicker";
-import { Driver, Delivery, DriverExpense } from "@/state/api";
+import "react-datepicker/dist/react-datepicker.css";
+import { Driver, Delivery } from "@/state/api";
 import AddDeliveryModal from "../(componenets)/AddDeliveryModal";
 import { useRouter } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
 import { setSelectedAccountingDate } from "@/state";
-import { createPortal } from "react-dom";
 import { PlusIcon } from "lucide-react";
 import Header from "../(componenets)/Header";
 
@@ -85,16 +83,6 @@ export default function AccountingPage() {
     totalExtraPayments: number; 
   }>);
 
-  // Calculate total from actual paid amounts
-  const totalActualCashPaid = useMemo(() => {
-    if (!deliveriesByDriver) return 0;
-    
-    let total = 0;
-    Object.values(deliveriesByDriver).forEach(driverData => {
-      total += driverData.totalAmount;
-    });
-    return total;
-  }, [deliveriesByDriver]);
 
   return (
     <div className="p-4">
@@ -147,10 +135,6 @@ function DriverCard({
   date: string;
 }) {
   const router = useRouter();
-  const { data: expenses } = useGetDriverExpensesQuery({
-    driverId: driverData.driver.id,
-    date,
-  });
   const { data: dayStatus } = useGetDriverDayStatusQuery({
     driverId: driverData.driver.id,
     date,

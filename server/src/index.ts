@@ -22,12 +22,7 @@ app.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"}));
 app.use(morgan("common"));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(cors({
-  origin: ['https://master.d2ku7rh3vs4gc2.amplifyapp.com', 'http://localhost:3000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
+app.use(cors());
 
 
 // ROUTES
