@@ -3,8 +3,8 @@ import { getProducts, createProduct, updateProductStock, getProductWithLogs } fr
 
 const router = Router();
 
-router.get('/', getProducts);
 router.get('/:productId', getProductWithLogs);
+router.get('/', getProducts);
 router.post('/', createProduct);
 router.put('/', updateProductStock);
 
