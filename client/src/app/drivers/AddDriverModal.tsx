@@ -5,12 +5,14 @@ interface AddDriverModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (data: { name: string; phoneNumber?: string }) => void;
+  initialData?: { name: string; phoneNumber?: string };
 }
 
 export default function AddDriverModal({
   isOpen,
   onClose,
   onSubmit,
+  initialData,
 }: AddDriverModalProps) {
   const [formData, setFormData] = useState({
     name: "",
@@ -27,6 +29,15 @@ export default function AddDriverModal({
     window.addEventListener("keydown", handleEsc);
     return () => window.removeEventListener("keydown", handleEsc);
   }, [onClose]);
+
+  useEffect(() => {
+    if (initialData) {
+      setFormData({
+        name: initialData.name,
+        phoneNumber: initialData.phoneNumber || "",
+      });
+    }
+  }, [initialData]);
 
   if (!isOpen || typeof window === "undefined") return null;
 

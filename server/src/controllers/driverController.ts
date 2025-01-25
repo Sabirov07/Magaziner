@@ -49,23 +49,45 @@ export const driverController = {
         try {
             const { id } = req.params;
 
-            const existingClient = await prisma.driver.findUnique({
-                where: { id }
-            })
+            // First delete related records
+            await prisma.$transaction([
+                // Delete related day statuses
+                prisma.driverDayStatus.deleteMany({
+                    where: { driverId: id }
+                }),
+                // Delete related deliveries
+                prisma.delivery.deleteMany({
+                    where: { driverId: id }
+                }),
+                // Finally delete the driver
+                prisma.driver.delete({
+                    where: { id }
+                })
+            ]);
 
-            if (!existingClient) {
-                res.status(404).json({error: 'Driver not found'})
-            }
-
-            await prisma.driver.delete({
-                where: { id }
-            })
-
-            res.json({message: 'Driver deleted successfully'})
+            res.json({ message: 'Driver deleted successfully' });
         } catch (error) {
-            res.status(500).json({error: 'Failed to delete Driver', stack: error instanceof Error ? error.stack : undefined})
+            console.error('Error deleting driver:', error);
+            res.status(500).json({
+                error: 'Failed to delete Driver',
+                stack: error instanceof Error ? error.stack : undefined
+            });
         }
     },
 
-    
+    updateDriver: async (req: Request, res: Response) => {
+        try {
+            const { id } = req.params;
+            const driver = await prisma.driver.update({
+                where: { id },
+                data: req.body
+            });
+            res.json(driver);
+        } catch (error) {
+            res.status(500).json({ 
+                error: 'Failed to update driver', 
+                stack: error instanceof Error ? error.stack : undefined 
+            });
+        }
+    },
 }

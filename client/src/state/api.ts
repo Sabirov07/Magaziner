@@ -75,6 +75,7 @@ export interface ProductWithLogs extends Product {
 export interface Driver {
   id: string;
   name: string;
+  phoneNumber?: string;
   createdAt: string;
   dayStatuses?: DriverDayStatus[];
 }
@@ -620,6 +621,23 @@ export const api = createApi({
         params: { date }
       }),
     }),
+
+    deleteDriver: build.mutation<void, string>({
+      query: (id) => ({
+        url: `/drivers/${id}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['Drivers'],
+    }),
+
+    updateDriver: build.mutation<Driver, { id: string; name: string; phoneNumber?: string }>({
+      query: ({ id, ...data }) => ({
+        url: `/drivers/${id}`,
+        method: 'PUT',
+        body: data
+      }),
+      invalidatesTags: ['Drivers']
+    }),
   })
 });
 
@@ -668,4 +686,6 @@ export const {
   useDeleteDailyExpenseMutation,
   useGetDriverDayStatusesQuery,
   useGetDriverDayTotalCashQuery,
+  useDeleteDriverMutation,
+  useUpdateDriverMutation,
 } = api;

@@ -21,10 +21,18 @@ const SidebarLink = ({
   isCollapsed
 }: SidebarLinkProps) => {
   const pathname = usePathname();
+  const dispatch = useAppDispatch();
   const isActive = pathname === href || (pathname === '/' && href === "/dashboard");
 
+  const handleClick = () => {
+    // Only close sidebar on mobile
+    if (window.innerWidth < 768) {
+      dispatch(setIsSidebarCollapsed(true));
+    }
+  };
+
   return (
-    <Link href={href}>
+    <Link href={href} onClick={handleClick}>
       <div className={`cursor-pointer flex items-center ${isCollapsed ? 'justify-center py-4' : 'justify-start px-8 py-4'} hover:text-blue-500 hover:bg-blue-100 gap-3 transition-colors ${isActive ? 'bg-blue-200 text-white': ''}`}>
         <Icon className='w-6 h-6 !text-gray-700' /> 
         <span className={`${isCollapsed ? 'hidden' : 'block'} font-medium text-gray-700`}>{label}</span>

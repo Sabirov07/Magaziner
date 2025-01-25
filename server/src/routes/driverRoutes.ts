@@ -10,5 +10,9 @@ router.get('/', driverController.getDrivers);
 
 router.post('/', driverController.createDriver)
 
+router.delete('/:id', driverController.deleteDriver);
+
+router.put('/:id', driverController.updateDriver);
+
 
 export default router;

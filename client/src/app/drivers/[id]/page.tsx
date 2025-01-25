@@ -5,13 +5,12 @@ import { useRouter, useParams } from "next/navigation";
 import {
   useGetDriverQuery,
   useGetDriverDeliveriesQuery,
-  useGetDriverExpensesQuery,
   useGetDriverDayStatusesQuery,
+  useUpdateDriverMutation,
+  useDeleteDriverMutation,
 } from "@/state/api";
 import { format } from "date-fns";
-import { pl } from "date-fns/locale";
-import { PlusIcon, ChevronDown, ChevronRight, Eye } from "lucide-react";
-import AddExpenseModal from "../AddExpenseModal";
+import { ChevronDown, ChevronRight, Eye, Pencil, Trash2 } from "lucide-react";
 import AddDriverModal from "../AddDriverModal";
 
 interface GroupedDeliveries {
@@ -29,14 +28,15 @@ export default function DriverPage() {
   const router = useRouter();
   const { id } = useParams();
   const driverId = typeof id === "string" ? id : "";
-  const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [expandedDates, setExpandedDates] = useState<{
     [key: string]: boolean;
   }>({});
 
   const { data: driver, isLoading } = useGetDriverQuery(driverId);
   const { data: deliveries } = useGetDriverDeliveriesQuery({ driverId });
-  const { data: expenses } = useGetDriverExpensesQuery({ driverId });
+
+  const [updateDriver] = useUpdateDriverMutation();
 
   // Get all dates from grouped deliveries with proper sorting
   const dates = useMemo(() => {
@@ -89,19 +89,16 @@ export default function DriverPage() {
     }, {});
   }, [deliveries]);
 
+  const toggleDate = (date: string) => {
+    setExpandedDates(prev => ({
+      ...prev,
+      [date]: !prev[date]
+    }));
+  };
+
   if (isLoading || !driver) {
     return <div>Loading...</div>;
   }
-
-  const totalExpenses =
-    expenses?.reduce((sum, exp) => sum + exp.amount, 0) || 0;
-
-  const toggleDate = (date: string) => {
-    setExpandedDates((prev) => ({
-      ...prev,
-      [date]: !prev[date],
-    }));
-  };
 
   return (
     <div className="w-full p-4 space-y-6">
@@ -110,14 +107,31 @@ export default function DriverPage() {
         <div className="flex justify-between items-start mb-4">
           <div>
             <h1 className="text-2xl font-bold">{driver.name}</h1>
+            {driver.phoneNumber && (
+              <p className="text-gray-600">{driver.phoneNumber}</p>
+            )}
           </div>
-          <button
-            onClick={() => setIsExpenseModalOpen(true)}
-            className="flex items-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          >
-            <PlusIcon className="h-4 w-4 mr-2" />
-            Yangi Xarajat
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setIsEditModalOpen(true)}
+              className="flex items-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            >
+              <Pencil className="h-4 w-4 mr-2" />
+              Tahrirlash
+            </button>
+            <button
+              onClick={() => {
+                // Add delete confirmation logic here
+                if (confirm("Haydovchini o'chirmoqchimisiz?")) {
+                  // Add delete logic here
+                }
+              }}
+              className="flex items-center px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+            >
+              <Trash2 className="h-4 w-4 mr-2" />
+              O'chirish
+            </button>
+          </div>
         </div>
       </div>
 
@@ -268,13 +282,22 @@ export default function DriverPage() {
         </div>
       </div>
 
-      <AddExpenseModal
-        isOpen={isExpenseModalOpen}
-        onClose={() => setIsExpenseModalOpen(false)}
+      <AddDriverModal
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
         onSubmit={async (data) => {
-          setIsExpenseModalOpen(false);
+          try {
+            await updateDriver({
+              id: driverId,
+              name: data.name,
+              phoneNumber: data.phoneNumber
+            }).unwrap();
+            setIsEditModalOpen(false);
+          } catch (error) {
+            console.error('Failed to update driver:', error);
+          }
         }}
-        driverId={driverId}
+        initialData={driver}
       />
     </div>
   );
