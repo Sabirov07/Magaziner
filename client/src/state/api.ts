@@ -626,9 +626,9 @@ export const api = createApi({
 export const {
   useGetDashboardMetricsQuery,
   useGetProductsQuery,
+  useGetProductByIdQuery,
   useCreateProductMutation,
   useLogProductMutation,
-  useGetProductByIdQuery,
   useGetRoutesQuery,
   useCreateRouteMutation,
   useGetDriversQuery,
